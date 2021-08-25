@@ -234,11 +234,11 @@
       
         <tags>
             
-            <tag> manjaro </tag>
-            
             <tag> virtualbox </tag>
             
             <tag> vmware </tag>
+            
+            <tag> manjaro </tag>
             
         </tags>
       
@@ -296,11 +296,11 @@
             
             <tag> virtualbox </tag>
             
+            <tag> command </tag>
+            
             <tag> ln </tag>
             
             <tag> tldr </tag>
-            
-            <tag> command </tag>
             
         </tags>
       
