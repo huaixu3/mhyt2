@@ -1,0 +1,6 @@
+public/
+.deploy*/
+node_modules/
+db.json
+themes/
+
