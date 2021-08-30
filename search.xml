@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>C/C++-格式化</title>
+      <link href="/2021/08/29/study_blog/cpp/2021-08-29-clang-format/"/>
+      <url>/2021/08/29/study_blog/cpp/2021-08-29-clang-format/</url>
+      
+        <content type="html"><![CDATA[<h1 id="做一个属于自己的代码格式"><a href="#做一个属于自己的代码格式" class="headerlink" title="做一个属于自己的代码格式"></a>做一个属于自己的代码格式</h1><p><em>转载请注明出处！</em></p><hr><blockquote><p>千万人，有千万种活法，也有千万种行文风格，各有特色。那么我自己的呢？<br>和朋友在讨论拿到别人的代码做的第一件是时候的时候，朋友的一句，先格式化。让我哭笑不得。<br>看别人的代码很难受，说不上哪里难受，就是慢且难以言表。<br>统一自己的代码风格，也统一所改变所浏览的代码风格  </p></blockquote><h2 id="确定一个自己喜欢的风格，或者接近目前代码的风格"><a href="#确定一个自己喜欢的风格，或者接近目前代码的风格" class="headerlink" title="确定一个自己喜欢的风格，或者接近目前代码的风格"></a>确定一个自己喜欢的风格，或者接近目前代码的风格</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">pacman -S clang <span class="comment">#这里使用的格式化工具是clang-format 包含在clang里面</span></span><br><span class="line"><span class="comment"># 选择一篇你日常写的代码，然后进行不同格式类型的格式化查看结果</span></span><br><span class="line">clang-format [你的代码.cpp] --style=LLVM <span class="comment">#style哪里可以选择其他</span></span><br><span class="line">clang-format -h <span class="comment">#查看用法，其中在style里面列出了几种类型</span></span><br><span class="line"><span class="comment">#LLVM, GNU, Google, Chromium, Microsoft, Mozilla, WebKit</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#选定一种自己喜欢，或者接近自己目前代码形式的风格。</span></span><br><span class="line">clang-format -style=LLVM -dump-config &gt; .clang-format</span><br><span class="line"><span class="comment">#生成.clang-format文件，然后进入.clang-format文件中进行自己喜欢格式的微调。</span></span><br><span class="line">mv .clang-format ~/.clang-format</span><br><span class="line"><span class="comment">#clang-format 在不指定style的时候默认会找当前目录下的.clang-format 文件，找不到会递归找父目录下的.clang-format文件。</span></span><br></pre></td></tr></table></figure><h2 id="在vim中配置"><a href="#在vim中配置" class="headerlink" title="在vim中配置"></a>在vim中配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装autoformat插件，它提供一个框架，调用本机有的格式化插件去格式化</span></span><br><span class="line">Plug <span class="string">&#x27;vim-autoformat/vim-autoformat&#x27;</span> </span><br><span class="line"><span class="comment">#配置对C/C++的配置和设置快捷键</span></span><br><span class="line"><span class="built_in">let</span> g:formatdef_my_clang = <span class="string">&#x27;&quot;clang-format&quot;&#x27;</span></span><br><span class="line"><span class="built_in">let</span> g:formatters_cpp = [<span class="string">&#x27;my_clang&#x27;</span>]</span><br><span class="line"><span class="built_in">let</span> g:formatters_c = [<span class="string">&#x27;my_clang&#x27;</span>]</span><br><span class="line">noremap &lt;LEADER&gt;bf :Autoformat&lt;CR&gt;</span><br><span class="line"><span class="comment">#其他语言的类似</span></span><br></pre></td></tr></table></figure><hr><p><strong>参考</strong>：</p><ul><li><a href="https://140.82.112.4/github.com/vim-autoformat/vim-autoformat">vim-autoformat</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> C/C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+            <tag> linux </tag>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> format </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>树莓派4B-配置和注意事项</title>
       <link href="/2021/07/02/study_blog/Linux/2021-07-02-raspberry/"/>
       <url>/2021/07/02/study_blog/Linux/2021-07-02-raspberry/</url>
