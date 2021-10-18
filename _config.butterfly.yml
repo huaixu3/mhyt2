@@ -666,10 +666,11 @@ aside:
     enable: true
     description:
     button:
-      enable: true
+      #enable: true
+      enable: false
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/huaixu3
   card_announcement:
     enable: false
     content: This is my Blog
@@ -706,10 +707,10 @@ aside:
 
 # busuanzi count for PV / UV in site
 # 訪問人數
-busuanzi:
-  site_uv: true
-  site_pv: true
-  page_pv: true
+#busuanzi:
+#  site_uv: true
+#  site_pv: true
+#  page_pv: true
 
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
